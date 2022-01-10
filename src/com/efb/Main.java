@@ -24,9 +24,9 @@ public class Main {
             case 2 -> primeNumber();
             case 3 -> convertEvenNumberToTowPrimeNumber();
             case 4 -> gharbal();
-            case 5-> bmm();
-            case 6-> tajze();
-            case 7-> eskanas();
+            case 5 -> bmm();
+            case 6 -> tajze();
+            case 7 -> eskanas();
         }
 
     }
@@ -62,12 +62,12 @@ public class Main {
 
     private static void bmm() {
         BMM bmm = new BMM();
-        System.out.println("BMM -------------> =  "+ bmm.bmmBazgashti(getNum(),getNum()));
+        System.out.println("BMM -------------> =  " + bmm.bmmBazgashti(getNum(), getNum()));
     }
 
     private static void tajze() {
         Tajzeh tajzeh = new Tajzeh();
-        tajzeh.t(getNum(),2);
+        tajzeh.t(getNum(), 2);
     }
 
     private static void eskanas() {
