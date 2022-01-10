@@ -31,11 +31,8 @@ public class Divisor {
      */
     public void calculateSqr(long n){
         for (long i = 1; i <=Math.sqrt(n) ; i++) {
-            if (n%i==0){
-                System.out.print(i);
-                System.out.print("    -----   ");
-                System.out.println(n/i);
-            }
+            if (n%i==0)
+                System.out.println(i +"     " + n/i);
         }
     }
 }
