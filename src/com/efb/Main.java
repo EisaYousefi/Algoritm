@@ -12,7 +12,7 @@ public class Main {
         System.out.println(" 4: پیدا کردن اعداد اول به روش غربال ");
         System.out.println(" 5: ب . م .م ");
         System.out.println(" 6: تجزیه به عاملهای اول ");
-        System.out.println(" 7: الگوریتم خرد کردن یک اسکناس ");
+        System.out.println(" 7: الگوریتم خرد کردن یک اسکناس  50 هزار تومانی");
         System.out.println(" 8: سری فیبوناچی ");
 
         System.out.println("=============================");
