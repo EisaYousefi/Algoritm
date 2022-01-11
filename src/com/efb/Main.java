@@ -12,7 +12,8 @@ public class Main {
         System.out.println(" 4: پیدا کردن اعداد اول به روش غربال ");
         System.out.println(" 5: ب . م .م ");
         System.out.println(" 6: تجزیه به عاملهای اول ");
-        System.out.println(" 6: الگوریتم خرد کردن یک اسکناس ");
+        System.out.println(" 7: الگوریتم خرد کردن یک اسکناس ");
+        System.out.println(" 8: سری فیبوناچی ");
 
         System.out.println("=============================");
         int s;
@@ -27,6 +28,7 @@ public class Main {
             case 5 -> bmm();
             case 6 -> tajze();
             case 7 -> eskanas();
+            case 8 -> febonachi();
         }
 
     }
@@ -71,6 +73,12 @@ public class Main {
     }
 
     private static void eskanas() {
+        Eskenas eskenas = new Eskenas();
+        eskenas.exec1();
+    }
 
+    private static void febonachi() {
+        Fibonachi fibonachi = new Fibonachi();
+        fibonachi.exec(getNum());
     }
 }
