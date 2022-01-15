@@ -7,14 +7,16 @@ public class Main {
     public static void main(String[] args) {
         // write your code here
         System.out.println("*--------------------------------------------------------------*");
-        System.out.println("*                                                مقسوم علیه :1 *");
-        System.out.println("*                                                   عدد اول :2 *");
-        System.out.println("*                         تبدیل اعداد زوج به جمع دو عدد اول :3 *");
-        System.out.println("*                          پیدا کردن اعداد اول به روش غربال :4 *");
-        System.out.println("*                                                  ب . م .م :5 *");
-        System.out.println("*                                      تجزیه به عاملهای اول :6 *");
-        System.out.println("*               الگوریتم خرد کردن یک اسکناس  50 هزار تومانی :7 *");
-        System.out.println("*                                            : سری فیبوناچی :8 *");
+        System.out.println("*                                                مقسوم علیه :  1 *");
+        System.out.println("*                                                   عدد اول :  2 *");
+        System.out.println("*                         تبدیل اعداد زوج به جمع دو عدد اول :  3 *");
+        System.out.println("*                          پیدا کردن اعداد اول به روش غربال :  4 *");
+        System.out.println("*                                                  ب . م .م :  5 *");
+        System.out.println("*                                      تجزیه به عاملهای اول :  6 *");
+        System.out.println("*               الگوریتم خرد کردن یک اسکناس  50 هزار تومانی :  7 *");
+        System.out.println("*                                            : سری فیبوناچی :  8 *");
+        System.out.println("*                                                : فاکتوریل :  9 *");
+        System.out.println("*                                                : مثلث اعداد : 10 *");
         System.out.println("*--------------------------------------------------------------*");
         System.out.println();
         int s;
@@ -30,6 +32,8 @@ public class Main {
             case 6 -> tajze();
             case 7 -> eskanas();
             case 8 -> febonachi();
+            case 9 -> factorial();
+            case 10 -> MA();
         }
 
     }
@@ -81,5 +85,17 @@ public class Main {
     private static void febonachi() {
         Fibonachi fibonachi = new Fibonachi();
         fibonachi.exec(getNum());
+    }
+
+    private static void factorial() {
+        Factorial factorial = new Factorial();
+        System.out.println(factorial.fact(getNum()));
+        ;
+
+    }
+
+    private static void MA() {
+        TriangleNumber t = new TriangleNumber()  ;
+        t.exec(getNum());
     }
 }

@@ -22,4 +22,11 @@ public class Fibonachi {
         }
         System.out.println(list);
     }
+
+    public long  execBackFun(long num){
+        if (num<=2)
+            return 1;
+        else
+            return execBackFun(num-1)+execBackFun(num-2);
+    }
 }
