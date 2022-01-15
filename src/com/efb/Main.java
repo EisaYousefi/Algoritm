@@ -6,7 +6,7 @@ public class Main {
 
     public static void main(String[] args) {
         // write your code here
-        System.out.println("*--------------------------------------------------------------*");
+        System.out.println("*----------------------------------------------------------------*");
         System.out.println("*                                                مقسوم علیه :  1 *");
         System.out.println("*                                                   عدد اول :  2 *");
         System.out.println("*                         تبدیل اعداد زوج به جمع دو عدد اول :  3 *");
@@ -18,7 +18,7 @@ public class Main {
         System.out.println("*                                                : فاکتوریل :  9 *");
         System.out.println("*                                              : مثلث اعداد : 10 *");
         System.out.println("*                                                    : توان : 11 *");
-        System.out.println("*--------------------------------------------------------------*");
+        System.out.println("*----------------------------------------------------------------*");
         System.out.println();
         int s;
         Scanner in = new Scanner(System.in);
@@ -103,7 +103,7 @@ public class Main {
 
     private static void tavan() {
         Tavan tavan = new Tavan();
-//        System.out.println(tavan.exec(getNum(),getNum()));
-        System.out.println(tavan.simple(getNum(),getNum()));
+        System.out.println(tavan.exec(getNum(),getNum()));
+//        System.out.println(tavan.simple(getNum(),getNum()));
     }
 }
