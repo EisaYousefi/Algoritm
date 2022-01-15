@@ -6,19 +6,20 @@ public class Main {
 
     public static void main(String[] args) {
         // write your code here
-        System.out.println(" 1: مقسوم علیه");
-        System.out.println(" 2: عدد اول ");
-        System.out.println(" 3: تبدیل اعداد زوج به جمع دو عدد اول ");
-        System.out.println(" 4: پیدا کردن اعداد اول به روش غربال ");
-        System.out.println(" 5: ب . م .م ");
-        System.out.println(" 6: تجزیه به عاملهای اول ");
-        System.out.println(" 7: الگوریتم خرد کردن یک اسکناس  50 هزار تومانی");
-        System.out.println(" 8: سری فیبوناچی ");
-
-        System.out.println("=============================");
+        System.out.println("*--------------------------------------------------------------*");
+        System.out.println("*                                                مقسوم علیه :1 *");
+        System.out.println("*                                                   عدد اول :2 *");
+        System.out.println("*                         تبدیل اعداد زوج به جمع دو عدد اول :3 *");
+        System.out.println("*                          پیدا کردن اعداد اول به روش غربال :4 *");
+        System.out.println("*                                                  ب . م .م :5 *");
+        System.out.println("*                                      تجزیه به عاملهای اول :6 *");
+        System.out.println("*               الگوریتم خرد کردن یک اسکناس  50 هزار تومانی :7 *");
+        System.out.println("*                                            : سری فیبوناچی :8 *");
+        System.out.println("*--------------------------------------------------------------*");
+        System.out.println();
         int s;
         Scanner in = new Scanner(System.in);
-        System.out.print("یکی از اعداد بالا را انتخاب  کنید: ");
+        System.out.print("یکی از اعداد بالا را انتخاب  کنید:                                 ");
         s = in.nextInt();
         switch (s) {
             case 1 -> divisor();

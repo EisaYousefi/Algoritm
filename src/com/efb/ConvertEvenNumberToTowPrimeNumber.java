@@ -19,7 +19,7 @@ public class ConvertEvenNumberToTowPrimeNumber {
     public void exec(long n){
         for (int i = 3; i <n/2 ; i+=2) {
             if (prime(i) && prime(n-i)){
-                System.out.println(i+"     " + (n-i));
+                System.out.println(i+"    +    " + (n-i+"    = "+n));
             }
         }
     }
