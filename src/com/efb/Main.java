@@ -16,7 +16,8 @@ public class Main {
         System.out.println("*               الگوریتم خرد کردن یک اسکناس  50 هزار تومانی :  7 *");
         System.out.println("*                                            : سری فیبوناچی :  8 *");
         System.out.println("*                                                : فاکتوریل :  9 *");
-        System.out.println("*                                                : مثلث اعداد : 10 *");
+        System.out.println("*                                              : مثلث اعداد : 10 *");
+        System.out.println("*                                                    : توان : 11 *");
         System.out.println("*--------------------------------------------------------------*");
         System.out.println();
         int s;
@@ -34,6 +35,7 @@ public class Main {
             case 8 -> febonachi();
             case 9 -> factorial();
             case 10 -> MA();
+            case 11 -> tavan();
         }
 
     }
@@ -97,5 +99,11 @@ public class Main {
     private static void MA() {
         TriangleNumber t = new TriangleNumber()  ;
         t.exec(getNum());
+    }
+
+    private static void tavan() {
+        Tavan tavan = new Tavan();
+//        System.out.println(tavan.exec(getNum(),getNum()));
+        System.out.println(tavan.simple(getNum(),getNum()));
     }
 }
