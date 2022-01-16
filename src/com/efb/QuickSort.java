@@ -69,5 +69,8 @@ public class QuickSort {
                 System.out.print(arr[i] + ", ");
             else
                 System.out.print(arr[i]);
+
+        System.out.println();
+
     }
 }

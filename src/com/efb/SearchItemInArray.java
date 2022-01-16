@@ -2,8 +2,8 @@ package com.efb;
 
 public class SearchItemInArray {
 
-    public long[] sort(long[] array){
-        long swap;
+    public int[] sort(int[] array){
+        int swap;
         for (int i = 0; i < array.length; i++) {
             for (int j = i+1; j <array.length ; j++) {
                 if (array[i]>array[j]){
@@ -17,7 +17,14 @@ public class SearchItemInArray {
         return array;
     }
 
-    private void printSortArray(long[] array) {
+    public int[] quickSort(int[] arr ){
+        QuickSort quickSort = new QuickSort();
+        quickSort.sort(arr);
+        quickSort.printArray(arr, arr.length);
+        return arr;
+    }
+
+    private void printSortArray(int[] array) {
         for (int j = 0; j < array.length; j++) {
             if (j!= array.length-1)
             System.out.print(array[j]+ " ,");
@@ -26,7 +33,7 @@ public class SearchItemInArray {
         }
     }
 
-    public long binSearch(long[] array , int low , int high , long num){
+    public int binSearch(int[] array , int low , int high , long num){
         int mid;
         if (low>high)
             return 0;

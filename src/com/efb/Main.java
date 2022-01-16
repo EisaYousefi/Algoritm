@@ -118,14 +118,14 @@ public class Main {
 
     private static void searchBinery() {
         SearchItemInArray s = new SearchItemInArray();
-       /* long[] array = new long[1000000];
+        int[] array = new int[200000];
         for (int i = 0; i < array.length; i++) {
             array[i] = i;
-        }*/
-        long[] array = new long[]{100, 1, 50, 500, 65, 0, 2, 5};
+        }
+       // int[] array = new int[]{100, 1, 50, 500, 65, 0, 2, 5};
 
         System.out.println("============");
-        System.out.println(s.binSearch(s.sort(array), 0, array.length, getNum()));
+        System.out.println(s.binSearch(s.quickSort(array), 0, array.length, getNum()));
     }
 
     private static void quickSort() {
