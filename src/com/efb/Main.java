@@ -14,10 +14,12 @@ public class Main {
         System.out.println("*                                                  ب . م .م :  5 *");
         System.out.println("*                                      تجزیه به عاملهای اول :  6 *");
         System.out.println("*               الگوریتم خرد کردن یک اسکناس  50 هزار تومانی :  7 *");
-        System.out.println("*                                            : سری فیبوناچی :  8 *");
-        System.out.println("*                                                : فاکتوریل :  9 *");
-        System.out.println("*                                              : مثلث اعداد : 10 *");
-        System.out.println("*                                                    : توان : 11 *");
+        System.out.println("*                                              سری فیبوناچی :  8 *");
+        System.out.println("*                                                  فاکتوریل :  9 *");
+        System.out.println("*                                                مثلث اعداد : 10 *");
+        System.out.println("*                                                      توان : 11 *");
+        System.out.println("*       یافتن کوچکترین عدد یا بزرگترین عدد یا  هر دوی  آنها : 12 *");
+        System.out.println("*                                            جستجویی دودویی : 13 *");
         System.out.println("*----------------------------------------------------------------*");
         System.out.println();
         int s;
@@ -36,6 +38,8 @@ public class Main {
             case 9 -> factorial();
             case 10 -> MA();
             case 11 -> tavan();
+            case 12 -> minOrMaxNum();
+            case 13 -> searchBinery();
         }
 
     }
@@ -105,5 +109,18 @@ public class Main {
         Tavan tavan = new Tavan();
         System.out.println(tavan.exec(getNum(),getNum()));
 //        System.out.println(tavan.simple(getNum(),getNum()));
+    }
+
+    private static void minOrMaxNum() {
+    }
+
+    private static void searchBinery() {
+        SearchItemInArray s = new SearchItemInArray();
+        long[] array  = new long[200000];
+        for (int i = 0; i <array.length ; i++) {
+            array[ i]=i;
+        }
+        System.out.println("============");
+        System.out.println( s.binSearch( s.sort(array) , 0 , array.length , getNum()));
     }
 }
