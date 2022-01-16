@@ -20,6 +20,7 @@ public class Main {
         System.out.println("*                                                      توان : 11 *");
         System.out.println("*       یافتن کوچکترین عدد یا بزرگترین عدد یا  هر دوی  آنها : 12 *");
         System.out.println("*                                            جستجویی دودویی : 13 *");
+        System.out.println("*                                            مرتب سازی سریع : 14 *");
         System.out.println("*----------------------------------------------------------------*");
         System.out.println();
         int s;
@@ -40,6 +41,7 @@ public class Main {
             case 11 -> tavan();
             case 12 -> minOrMaxNum();
             case 13 -> searchBinery();
+            case 14 -> quickSort();
         }
 
     }
@@ -101,13 +103,13 @@ public class Main {
     }
 
     private static void MA() {
-        TriangleNumber t = new TriangleNumber()  ;
+        TriangleNumber t = new TriangleNumber();
         t.exec(getNum());
     }
 
     private static void tavan() {
         Tavan tavan = new Tavan();
-        System.out.println(tavan.exec(getNum(),getNum()));
+        System.out.println(tavan.exec(getNum(), getNum()));
 //        System.out.println(tavan.simple(getNum(),getNum()));
     }
 
@@ -116,11 +118,30 @@ public class Main {
 
     private static void searchBinery() {
         SearchItemInArray s = new SearchItemInArray();
-        long[] array  = new long[200000];
-        for (int i = 0; i <array.length ; i++) {
-            array[ i]=i;
-        }
+       /* long[] array = new long[1000000];
+        for (int i = 0; i < array.length; i++) {
+            array[i] = i;
+        }*/
+        long[] array = new long[]{100, 1, 50, 500, 65, 0, 2, 5};
+
         System.out.println("============");
-        System.out.println( s.binSearch( s.sort(array) , 0 , array.length , getNum()));
+        System.out.println(s.binSearch(s.sort(array), 0, array.length, getNum()));
+    }
+
+    private static void quickSort() {
+        int[] arr = new int[]{100, 1, 50, 500, 65, 0, 2, 5};
+
+       /*
+         int[] arr = new int[1000000];
+         for (int i = 0; i < arr.length; i++) {
+            arr[i]=i+1;
+        }
+      */
+
+        int n = arr.length;
+
+        QuickSort quickSort = new QuickSort();
+        quickSort.sort(arr);
+        quickSort.printArray(arr, n);
     }
 }
