@@ -65,18 +65,6 @@ public class QuickSort {
         numbers[j] = temp;
     }
 
-    public void printArray(int[] arr, int size) {
-        for (int i = 0; i < size; i++)
-            if (i != size - 1)
-                System.out.print(arr[i] + ", ");
-            else
-                System.out.print(arr[i]);
-
-        System.out.println();
-
-    }
-
-
     public void reverse(int[] array) {
         for (int i = 0; i < array.length / 2; i++) {
             int other = array.length - i - 1;

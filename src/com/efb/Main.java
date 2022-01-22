@@ -1,5 +1,6 @@
 package com.efb;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
@@ -26,6 +27,7 @@ public class Main {
         System.out.println("*                                            جمع کردن اعداد : 17 *");
         System.out.println("*  گذاشتن اعضا کنار هم {1و2و3}={11و12و13و21و22و23و31و32و33} : 18 *");
         System.out.println("*                                 برعکس کردن آرایه(Reverse) : 19 *");
+        System.out.println("*                                        آرایه های چند بعدی : 19 *");
         System.out.println("*----------------------------------------------------------------*");
         System.out.println();
         int s;
@@ -52,6 +54,7 @@ public class Main {
             case 17 -> sum();
             case 18 -> printPairs();
             case 19 -> revers();
+            case 20 -> arrays();
         }
 
     }
@@ -156,7 +159,7 @@ public class Main {
 
         QuickSort quickSort = new QuickSort();
         quickSort.sort(arr);
-        quickSort.printArray(arr, n);
+        System.out.println(Arrays.toString(arr));
 
 
     }
@@ -186,11 +189,15 @@ public class Main {
     }
 
     private static void revers() {
-        int[] array = new int[]{1,2,10,4,5};
+        int[] array = new int[]{1,2,10,4,5,6};
         QuickSort quickSort = new QuickSort();
         System.out.println("Reverse");
         quickSort.reverse(array);
         System.out.println("Sort And Reverse");
         quickSort.sortAndReverse(array);
+    }
+
+    private static void arrays() {
+        ArraySample.int2DArray();
     }
 }

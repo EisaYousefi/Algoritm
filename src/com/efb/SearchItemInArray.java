@@ -1,5 +1,7 @@
 package com.efb;
 
+import java.util.Arrays;
+
 public class SearchItemInArray {
 
     public int[] sort(int[] array){
@@ -20,7 +22,7 @@ public class SearchItemInArray {
     public int[] quickSort(int[] arr ){
         QuickSort quickSort = new QuickSort();
         quickSort.sort(arr);
-        quickSort.printArray(arr, arr.length);
+        System.out.println(Arrays.toString(arr));
         return arr;
     }
 
