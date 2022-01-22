@@ -27,7 +27,7 @@ public class Main {
         System.out.println("*                                            جمع کردن اعداد : 17 *");
         System.out.println("*  گذاشتن اعضا کنار هم {1و2و3}={11و12و13و21و22و23و31و32و33} : 18 *");
         System.out.println("*                                 برعکس کردن آرایه(Reverse) : 19 *");
-        System.out.println("*                                        آرایه های چند بعدی : 19 *");
+        System.out.println("*                                        آرایه های چند بعدی : 20 *");
         System.out.println("*----------------------------------------------------------------*");
         System.out.println();
         int s;
