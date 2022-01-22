@@ -22,6 +22,10 @@ public class Main {
         System.out.println("*                                            جستجویی دودویی : 13 *");
         System.out.println("*                                            مرتب سازی سریع : 14 *");
         System.out.println("*                                                 مثلث خیام : 15 *");
+        System.out.println("*                                          تولید عدد باینری : 16 *");
+        System.out.println("*                                            جمع کردن اعداد : 17 *");
+        System.out.println("*  گذاشتن اعضا کنار هم {1و2و3}={11و12و13و21و22و23و31و32و33} : 18 *");
+        System.out.println("*                                 برعکس کردن آرایه(Reverse) : 19 *");
         System.out.println("*----------------------------------------------------------------*");
         System.out.println();
         int s;
@@ -44,6 +48,10 @@ public class Main {
             case 13 -> searchBinery();
             case 14 -> quickSort();
             case 15 -> MKH();
+            case 16 -> binaryDigit();
+            case 17 -> sum();
+            case 18 -> printPairs();
+            case 19 -> revers();
         }
 
     }
@@ -58,7 +66,9 @@ public class Main {
 
     private static void divisor() {
         Divisor divisor = new Divisor();
-        divisor.calculateSqr(getNum());
+        //divisor.calculateSqr(getNum());
+        System.out.println(divisor.recursive(getNum(),getNum()));
+
     }
 
     private static void primeNumber() {
@@ -111,8 +121,10 @@ public class Main {
 
     private static void tavan() {
         Tavan tavan = new Tavan();
-        System.out.println(tavan.exec(getNum(), getNum()));
+       // System.out.println(tavan.exec(getNum(), getNum()));
 //        System.out.println(tavan.simple(getNum(),getNum()));
+        long recursion = tavan.recursion(getNum(),getNum());
+        System.out.println(recursion);
     }
 
     private static void minOrMaxNum() {
@@ -145,10 +157,40 @@ public class Main {
         QuickSort quickSort = new QuickSort();
         quickSort.sort(arr);
         quickSort.printArray(arr, n);
+
+
     }
 
     private static void MKH() {
         KhayamM khayamM=new KhayamM();
         khayamM.khayam();
+    }
+
+    private static void binaryDigit() {
+        BinaryDigit binaryDigit = new BinaryDigit();
+        System.out.println(binaryDigit.recursive(getNum()));
+    }
+
+    private static void sum() {
+        long[] array = new long[]{1,3,4,5};
+        Sum.spofArray(array);
+    }
+
+    private static void printPairs() {
+        long[] array = new long[]{1,2,3,4,5};
+        long[] arrayA = new long[]{100,0,20,5,1};
+        long[] arrayB = new long[]{20,1,20,4,2};
+       // PrintPairs.printPairs(arrayA);
+        //PrintPairs.triangle90(arrayA);
+        PrintPairs.printUnorderedPairs(arrayA,arrayB);
+    }
+
+    private static void revers() {
+        int[] array = new int[]{1,2,10,4,5};
+        QuickSort quickSort = new QuickSort();
+        System.out.println("Reverse");
+        quickSort.reverse(array);
+        System.out.println("Sort And Reverse");
+        quickSort.sortAndReverse(array);
     }
 }

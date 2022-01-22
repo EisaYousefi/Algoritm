@@ -22,4 +22,14 @@ public class Tavan {
         else
             return y * y * num; //if n odd
     }
+
+    public long recursion(long base, long exp){
+        if (exp==0 ||exp==1)
+            return base;
+        if (exp<0||base<0){
+            System.out.println("base or exp > 0");
+            return -1;
+        }
+        return base * recursion(base,exp-1);
+    }
 }
