@@ -21,6 +21,7 @@ public class Main {
         System.out.println("*       یافتن کوچکترین عدد یا بزرگترین عدد یا  هر دوی  آنها : 12 *");
         System.out.println("*                                            جستجویی دودویی : 13 *");
         System.out.println("*                                            مرتب سازی سریع : 14 *");
+        System.out.println("*                                                 مثلث خیام : 15 *");
         System.out.println("*----------------------------------------------------------------*");
         System.out.println();
         int s;
@@ -42,6 +43,7 @@ public class Main {
             case 12 -> minOrMaxNum();
             case 13 -> searchBinery();
             case 14 -> quickSort();
+            case 15 -> MKH();
         }
 
     }
@@ -143,5 +145,10 @@ public class Main {
         QuickSort quickSort = new QuickSort();
         quickSort.sort(arr);
         quickSort.printArray(arr, n);
+    }
+
+    private static void MKH() {
+        KhayamM khayamM=new KhayamM();
+        khayamM.khayam();
     }
 }
