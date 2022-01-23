@@ -11,7 +11,7 @@ public class Fibonachi {
             System.out.println("number > 0");
             return;
         }
-        if (num <=1) {
+        if (num < 2) {
             System.out.println(num);
             return;
         }
@@ -23,9 +23,17 @@ public class Fibonachi {
         System.out.println(list);
     }
 
+    public void pF(long num){
+        for (int i = 0; i <num ; i++) {
+            System.out.println(execBackFun(num));;
+        }
+    }
     public long execBackFun(long num) {
-        if (num < 0) return -1;
-        if (num <= 1) return num;
-        return execBackFun(num - 1) + execBackFun(num - 2);
+        if (num < 0)
+            return 0;
+        else if (num == 1)
+            return 1;
+        else
+            return execBackFun(num - 1) + execBackFun(num - 2);
     }
 }

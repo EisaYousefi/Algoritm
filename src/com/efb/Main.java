@@ -1,5 +1,8 @@
 package com.efb;
 
+import com.efb.linkedList.SingleLinkedList;
+
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
@@ -21,6 +24,19 @@ public class Main {
         System.out.println("*       یافتن کوچکترین عدد یا بزرگترین عدد یا  هر دوی  آنها : 12 *");
         System.out.println("*                                            جستجویی دودویی : 13 *");
         System.out.println("*                                            مرتب سازی سریع : 14 *");
+        System.out.println("*                                                 مثلث خیام : 15 *");
+        System.out.println("*                                          تولید عدد باینری : 16 *");
+        System.out.println("*                                            جمع کردن اعداد : 17 *");
+        System.out.println("*  گذاشتن اعضا کنار هم {1و2و3}={11و12و13و21و22و23و31و32و33} : 18 *");
+        System.out.println("*                                 برعکس کردن آرایه(Reverse) : 19 *");
+        System.out.println("*  یافتن بزرگترین معدل ها از میانگین تمامی معدل ها/آرایه ها : 20 *");
+        System.out.println("*              یافتن عدد جا افتاده در بین اعداد آرایه 1تا10 : 21 *");
+        System.out.println("*                              یافتن {2و6و3و9و11}-> 6+3 = 9 : 22 *");
+        System.out.println("*                     پیدا کردن بزرگترین دو عدد در یک آرایه : 23 *");
+        System.out.println("*     پیدا کردن uniqueArray  (آرایه ای که عضو تکراری نداره) : 24 *");
+        System.out.println("*       پیدا کردن دو آرایه برابر که اعضای آن ها جابجا هستند : 25 *");
+        System.out.println("*                   چرخش 90 درجه یک ماتریس (آرایه چند بعدی) : 26 *");
+        System.out.println("* 27 : SingleLinkedList                                          *");
         System.out.println("*----------------------------------------------------------------*");
         System.out.println();
         int s;
@@ -42,11 +58,24 @@ public class Main {
             case 12 -> minOrMaxNum();
             case 13 -> searchBinery();
             case 14 -> quickSort();
+            case 15 -> MKH();
+            case 16 -> binaryDigit();
+            case 17 -> sum();
+            case 18 -> printPairs();
+            case 19 -> revers();
+            case 20 -> arrays();
+            case 21 -> missingNumber();
+            case 22 -> pairsTowSum();
+            case 23 -> maxProduct();
+            case 24 -> isUniqueArray();
+            case 25 -> permutation();
+            case 26 -> rotateMatrix();
+            case 27 -> singleLinkedList();
         }
 
     }
 
-    private static long getNum() {
+    public static long getNum() {
         long n;
         Scanner in = new Scanner(System.in);
         System.out.print("Enter number: ");
@@ -56,7 +85,9 @@ public class Main {
 
     private static void divisor() {
         Divisor divisor = new Divisor();
-        divisor.calculateSqr(getNum());
+        //divisor.calculateSqr(getNum());
+        System.out.println(divisor.recursive(getNum(), getNum()));
+
     }
 
     private static void primeNumber() {
@@ -111,8 +142,10 @@ public class Main {
 
     private static void tavan() {
         Tavan tavan = new Tavan();
-        System.out.println(tavan.exec(getNum(), getNum()));
+        // System.out.println(tavan.exec(getNum(), getNum()));
 //        System.out.println(tavan.simple(getNum(),getNum()));
+        long recursion = tavan.recursion(getNum(), getNum());
+        System.out.println(recursion);
     }
 
     private static void minOrMaxNum() {
@@ -124,7 +157,7 @@ public class Main {
         for (int i = 0; i < array.length; i++) {
             array[i] = i;
         }
-       // int[] array = new int[]{100, 1, 50, 500, 65, 0, 2, 5};
+        // int[] array = new int[]{100, 1, 50, 500, 65, 0, 2, 5};
 
         System.out.println("============");
         System.out.println(s.binSearch(s.quickSort(array), 0, array.length, getNum()));
@@ -144,6 +177,107 @@ public class Main {
 
         QuickSort quickSort = new QuickSort();
         quickSort.sort(arr);
-        quickSort.printArray(arr, n);
+        System.out.println(Arrays.toString(arr));
+
+
+    }
+
+    private static void MKH() {
+        KhayamM khayamM = new KhayamM();
+        khayamM.khayam();
+    }
+
+    private static void binaryDigit() {
+        BinaryDigit binaryDigit = new BinaryDigit();
+        System.out.println(binaryDigit.recursive(getNum()));
+    }
+
+    private static void sum() {
+        long[] array = new long[]{1, 3, 4, 5};
+        Sum.spofArray(array);
+    }
+
+    private static void printPairs() {
+        long[] array = new long[]{1, 2, 3, 4, 5};
+        long[] arrayA = new long[]{100, 0, 20, 5, 1};
+        long[] arrayB = new long[]{20, 1, 20, 4, 2};
+        // PrintPairs.printPairs(arrayA);
+        //PrintPairs.triangle90(arrayA);
+        PrintPairs.printUnorderedPairs(arrayA, arrayB);
+    }
+
+    private static void revers() {
+        int[] array = new int[]{1, 2, 10, 4, 5, 6};
+        QuickSort quickSort = new QuickSort();
+        System.out.println("Reverse");
+        quickSort.reverse(array);
+        System.out.println("Sort And Reverse");
+        quickSort.sortAndReverse(array);
+    }
+
+    private static void arrays() {
+        // ArraySample.int2DArray();
+        ArraySample.average(getNum());
+    }
+
+    private static void missingNumber() {
+        ArraySample.missingNumber();
+    }
+
+    private static void pairsTowSum() {
+        int nums[]=new int[]{2,3,6,9,11};
+        int target = 9;
+        int[] result = ArraySample.TowSum(nums ,target );
+        System.out.println("nums : "+Arrays.toString(nums) +
+                "  target : "+target);
+
+        System.out.println("TowSumIndex : "+Arrays.toString(result));
+        System.out.println(nums[result[0]] +" + " +
+                nums[result[1]]+" = " +target);
+
+        System.out.println("-----------------------------");
+        int nums1[]=new int[]{2,100,8,1,7,9,13};
+        int target1 = 8;
+        int[] result1 = ArraySample.TowSum(nums1 ,target1 );
+        System.out.println("nums1 : "+Arrays.toString(nums1) +
+                "  target1 : "+target1);
+
+        System.out.println("TowSumIndex: "+Arrays.toString(result1));
+        System.out.println(nums1[result1[0]] +" + " +
+                nums1[result1[1]]+" = " +target1);
+    }
+
+    private static void maxProduct(){
+        int nums[]=new int[]{2,200,8,1,7,9,130,140};
+        System.out.println(Arrays.toString(nums));
+        System.out.println(ArraySample.maxProduct(nums));
+    }
+
+    private static void isUniqueArray() {
+        int nums[]=new int[]{1,2,3,5,6};
+       // int nums[]=new int[]{1,2,3,5,6,1};
+        System.out.println(Arrays.toString(nums));
+        System.out.println(ArraySample.isUnique(nums));
+    }
+
+    private static void permutation() {
+        int numsA[]=new int[]{1,2,3,5,4,6};
+        int numsB[]=new int[]{1,3,4,5,2,6};
+        System.out.println(Arrays.toString(numsA));
+        System.out.println(Arrays.toString(numsB));
+        System.out.println( ArraySample.permutation(numsA,numsB));;
+    }
+
+    private static void rotateMatrix() {
+        int[][] matrix={{1,2,3},{4,5,6},{7,8,9}};
+        System.out.println(Arrays.deepToString(matrix));
+        System.out.println( ArraySample.rotateMatrix90(matrix));
+        System.out.println(Arrays.deepToString(matrix));
+    }
+
+    private static void singleLinkedList() {
+        SingleLinkedList sll = new SingleLinkedList();
+        sll.creatSingleLKinkedList(5);
+        System.out.println(sll.head.value);
     }
 }

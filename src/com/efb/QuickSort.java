@@ -1,5 +1,7 @@
 package com.efb;
 
+import java.util.Arrays;
+
 public class QuickSort {
     private int[] numbers;
     private int number;
@@ -63,14 +65,18 @@ public class QuickSort {
         numbers[j] = temp;
     }
 
-    public void printArray(int[] arr, int size) {
-        for (int i = 0; i < size; i++)
-            if (i != size - 1)
-                System.out.print(arr[i] + ", ");
-            else
-                System.out.print(arr[i]);
+    public void reverse(int[] array) {
+        for (int i = 0; i < array.length / 2; i++) {
+            int other = array.length - i - 1;
+            int temp = array[i];
+            array[i] = array[other];
+            array[other] = temp;
+        }
+        System.out.println(Arrays.toString(array));
+    }
 
-        System.out.println();
-
+    public void sortAndReverse(int[] array) {
+        sort(array);
+        reverse(array);
     }
 }
