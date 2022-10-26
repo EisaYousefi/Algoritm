@@ -1,15 +1,19 @@
 package com.efb;
 
-import com.efb.linkedList.SingleLinkedList;
+import com.efb.linkedList.SinglyLinkedList;
+import com.efb.menuReply.SubMenu;
+import com.efb.menuReply.TreeNode;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) {
         // write your code here
-        System.out.println("*----------------------------------------------------------------*");
+     /*     System.out.println("*----------------------------------------------------------------*");
         System.out.println("*                                                مقسوم علیه :  1 *");
         System.out.println("*                                                   عدد اول :  2 *");
         System.out.println("*                         تبدیل اعداد زوج به جمع دو عدد اول :  3 *");
@@ -39,10 +43,10 @@ public class Main {
         System.out.println("* 27 : SingleLinkedList                                          *");
         System.out.println("*----------------------------------------------------------------*");
         System.out.println();
-        int s;
-        Scanner in = new Scanner(System.in);
+
+      Scanner in = new Scanner(System.in);
         System.out.print("یکی از اعداد بالا را انتخاب  کنید:                                 ");
-        s = in.nextInt();
+        int s = in.nextInt();
         switch (s) {
             case 1 -> divisor();
             case 2 -> primeNumber();
@@ -71,8 +75,37 @@ public class Main {
             case 25 -> permutation();
             case 26 -> rotateMatrix();
             case 27 -> singleLinkedList();
-        }
+        }*/
 
+
+        List<SubMenu> subMenus = new ArrayList<>();
+        TreeNode root = new TreeNode("Golpayegani", 1);
+        TreeNode t1 = new TreeNode("Hammed", 2);
+        TreeNode t2 = new TreeNode("Mohammad", 3);
+        TreeNode t3 = new TreeNode("Jamali", 4);
+        TreeNode t11 = new TreeNode("Eisa", 5);
+        TreeNode t12 = new TreeNode("Javad", 6);
+        TreeNode t13 = new TreeNode("Reza", 6);
+        TreeNode t21 = new TreeNode("Hamid", 7);
+        TreeNode t22 = new TreeNode("Farid", 8);
+        TreeNode t31 = new TreeNode("Masomi", 8);
+
+
+        root.addChild(t1,root.id);
+        root.addChild(t2,root.id);
+        root.addChild(t3,root.id);
+
+        t1.addChild(t11,t1.id);
+        t1.addChild(t12,t1.id);
+        t1.addChild(t13,t1.id);
+        t2.addChild(t21,t2.id);
+        t2.addChild(t22,t2.id);
+
+        t22.addChild(t31,t22.id);
+
+        System.out.println(root.print(0));
+
+        System.out.println(root.find(t1.id , root ));
     }
 
     public static long getNum() {
@@ -223,59 +256,82 @@ public class Main {
     }
 
     private static void pairsTowSum() {
-        int nums[]=new int[]{2,3,6,9,11};
+        int nums[] = new int[]{2, 3, 6, 9, 11};
         int target = 9;
-        int[] result = ArraySample.TowSum(nums ,target );
-        System.out.println("nums : "+Arrays.toString(nums) +
-                "  target : "+target);
+        int[] result = ArraySample.TowSum(nums, target);
+        System.out.println("nums : " + Arrays.toString(nums) +
+                "  target : " + target);
 
-        System.out.println("TowSumIndex : "+Arrays.toString(result));
-        System.out.println(nums[result[0]] +" + " +
-                nums[result[1]]+" = " +target);
+        System.out.println("TowSumIndex : " + Arrays.toString(result));
+        System.out.println(nums[result[0]] + " + " +
+                nums[result[1]] + " = " + target);
 
         System.out.println("-----------------------------");
-        int nums1[]=new int[]{2,100,8,1,7,9,13};
+        int nums1[] = new int[]{2, 100, 8, 1, 7, 9, 13};
         int target1 = 8;
-        int[] result1 = ArraySample.TowSum(nums1 ,target1 );
-        System.out.println("nums1 : "+Arrays.toString(nums1) +
-                "  target1 : "+target1);
+        int[] result1 = ArraySample.TowSum(nums1, target1);
+        System.out.println("nums1 : " + Arrays.toString(nums1) +
+                "  target1 : " + target1);
 
-        System.out.println("TowSumIndex: "+Arrays.toString(result1));
-        System.out.println(nums1[result1[0]] +" + " +
-                nums1[result1[1]]+" = " +target1);
+        System.out.println("TowSumIndex: " + Arrays.toString(result1));
+        System.out.println(nums1[result1[0]] + " + " +
+                nums1[result1[1]] + " = " + target1);
     }
 
-    private static void maxProduct(){
-        int nums[]=new int[]{2,200,8,1,7,9,130,140};
+    private static void maxProduct() {
+        int nums[] = new int[]{2, 200, 8, 1, 7, 9, 130, 140};
         System.out.println(Arrays.toString(nums));
         System.out.println(ArraySample.maxProduct(nums));
     }
 
     private static void isUniqueArray() {
-        int nums[]=new int[]{1,2,3,5,6};
-       // int nums[]=new int[]{1,2,3,5,6,1};
+        int nums[] = new int[]{1, 2, 3, 5, 6};
+        // int nums[]=new int[]{1,2,3,5,6,1};
         System.out.println(Arrays.toString(nums));
         System.out.println(ArraySample.isUnique(nums));
     }
 
     private static void permutation() {
-        int numsA[]=new int[]{1,2,3,5,4,6};
-        int numsB[]=new int[]{1,3,4,5,2,6};
+        int numsA[] = new int[]{1, 2, 3, 5, 4, 6};
+        int numsB[] = new int[]{1, 3, 4, 5, 2, 6};
         System.out.println(Arrays.toString(numsA));
         System.out.println(Arrays.toString(numsB));
-        System.out.println( ArraySample.permutation(numsA,numsB));;
+        System.out.println(ArraySample.permutation(numsA, numsB));
+        ;
     }
 
     private static void rotateMatrix() {
-        int[][] matrix={{1,2,3},{4,5,6},{7,8,9}};
+        int[][] matrix = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
         System.out.println(Arrays.deepToString(matrix));
-        System.out.println( ArraySample.rotateMatrix90(matrix));
+        System.out.println(ArraySample.rotateMatrix90(matrix));
         System.out.println(Arrays.deepToString(matrix));
     }
 
     private static void singleLinkedList() {
-        SingleLinkedList sll = new SingleLinkedList();
-        sll.creatSingleLKinkedList(5);
+        SinglyLinkedList sll = new SinglyLinkedList();
+        sll.createSinglyLinkedList(5);
+        System.out.println(sll.head.next);
         System.out.println(sll.head.value);
+
+        sll.insertInLinkedList(0, 0);
+        System.out.println(sll.head.next);
+        System.out.println(sll.head.value);
+
+        sll.insertInLinkedList(2, 2);
+        System.out.println(sll.head.next);
+        System.out.println(sll.head.next.next.value);
+
+        sll.insertInLinkedList(3, 3);
+        System.out.println(sll.head.next);
+        System.out.println(sll.head.next.next.next.value);
+
+
+        sll.insertInLinkedList(1, 1);
+        System.out.println(sll.head.next);
+        System.out.println(sll.head.next.value);
+
+        System.out.println(sll.size);
+
+
     }
 }
