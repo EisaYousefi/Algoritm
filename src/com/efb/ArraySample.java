@@ -5,6 +5,7 @@ import java.util.Arrays;
 public class ArraySample {
 
     public static void int2DArray() {
+
         int[][] int2DArray;
         int2DArray = new int[2][2];
         int2DArray[0][0] = 1;

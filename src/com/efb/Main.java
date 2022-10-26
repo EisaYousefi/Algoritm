@@ -156,7 +156,9 @@ public class Main {
 
     private static void febonachi() {
         Fibonachi fibonachi = new Fibonachi();
-        fibonachi.exec(getNum());
+        //fibonachi.exec(getNum());
+        System.out.println(fibonachi.execBackFun(getNum()));
+
     }
 
     private static void factorial() {
